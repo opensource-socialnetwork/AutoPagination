@@ -27,7 +27,7 @@ Ossn.AutoPaginationURLparam = function(name, url){
 };
 $(document).ready(function() {
 	$calledOnce = [];
-	$('.newsfeed-middle .user-activity .ossn-pagination li').hide();
+	$('.newsfeed-middle .user-activity .ossn-pagination li').css({"visibility":"hidden"});
 	Ossn.isInViewPort({
 		element: '.newsfeed-middle .user-activity .ossn-pagination',
 		callback: function(event, $all_elements) {
@@ -57,7 +57,7 @@ $(document).ready(function() {
 								$('.user-activity').append($element.html()); //append the new data
 								selfElement.html($clone); //set pagination content with new pagination contents
 								selfElement.appendTo('.user-activity'); //append the pagnation back to at end
-								$('.newsfeed-middle .user-activity .ossn-pagination li').hide();
+								$('.newsfeed-middle .user-activity .ossn-pagination li').css({"visibility":"hidden"});
 							}
                             return;
 						},
